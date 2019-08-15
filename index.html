@@ -9,25 +9,31 @@
 
 </head>
 <body>
+<div class="container"> 
+    <div class="row text-center guide"><h4> Click a gif category and see the current top most popular giphy's of that category!</h4></div>
 
 	<div id="emotionButtons">
 	<!-- where the buttons go -->
 	</div>
-
-	<div id="form">
+	
 	<form id ="emotion-form">
-	  <label for="emotion-input">Type an emotion here</label><br>
-	  <input type="text" id="emotion-input"><br><br>
-	  <!-- <input id="addEmotion" type="submit" value="Submit"> -->
-	  <button type="button" class="btn btn-info btn-secondary btn-sm float-left" id="addEmotion" type="submit">Submit</button><br>
-	</form>
+	<div class="row">
+	<div>
+	  <label for="emotion-input"><b>Type a gif name here  <b></label><br><br>
 	</div>
+	  <input type="text" name="" id="emotion-input"><br><br><button class="btn btn-info btn-secondary btn-sm float-right" id="addEmotion">Add Category</button>
+	</div>
+	</form>	
 
 	<div id="emotions">
 	<!-- where the gifs get dumped -->
 	</div>
-
+</div>
 
 <script type ="text/javascript" src="javascript/giphy.js"></script>
 </body>
 </html>
+
+
+
+   

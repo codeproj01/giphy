@@ -1,5 +1,7 @@
+
 body {
 	background-color: LightGrey;
+width: 100%;
 }
 
 #form {
@@ -13,6 +15,11 @@ body {
 	margin-left: 5px;
 	font-size: 12px;
 	width: 75%;
+
+margin-top: 2%;
+      margin-bottom: 2%;
+      font-size: 125%;
+      font-weight: bold;
 }
 
 #emotions {
@@ -33,4 +40,3 @@ body {
 	width: auto;
 	height: auto;
 }
-
