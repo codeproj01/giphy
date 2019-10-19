@@ -84,7 +84,7 @@ document.getElementById("addGifs").addEventListener("click", function(e){
 	e.preventDefault();
 	// User input from the textbox
 	let gifs = document.getElementById("gifs-input").value.trim();
-	// Addd to array
+	// Add to array
 	topics.push(gifs);
 	//Show buttons
 	renderButtons();
