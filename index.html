@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Giphy API Homework</title>
+ <title>Giphy API </title>
  <link rel="stylesheet" type="text/css" href="assets/style.css">
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
@@ -12,21 +12,21 @@
 <div class="container"> 
     <div class="row text-center guide"><h4> Click a gif category and see the current top most popular giphy's of that category!</h4></div>
 
-	<div id="emotionButtons">
-	<!-- where the buttons go -->
+	<div id="gifsButtons">
+	<!-- Instantiate Buttons here dynamically -->
 	</div>
 	
-	<form id ="emotion-form">
+	<form id ="gifs-form">
 	<div class="row">
 	<div>
-	  <label for="emotion-input"><b>Type a gif name here  <b></label><br><br>
+	  <label for="gifs-input"><b>Type a gif name here  <b></label><br><br>
 	</div>
-	  <input type="text" name="" id="emotion-input"><br><br><button class="btn btn-info btn-secondary btn-sm float-right" id="addEmotion">Add Category</button>
+	  <input type="text" name="" id="gifs-input"><br><br><button class="btn btn-info btn-secondary btn-sm float-right" id="addGifs">Add Category</button>
 	</div>
 	</form>	
 
-	<div id="emotions">
-	<!-- where the gifs get dumped -->
+	<div id="gifsDump">
+	<!-- Dump Gifs here dynamically -->
 	</div>
 </div>
 

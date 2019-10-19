@@ -11,7 +11,7 @@ width: 100%;
 	padding: 0px 45px 10px 1000px;
 }
 
-#emotionButtons {
+#gifsButtons {
 	margin-left: 5px;
 	font-size: 12px;
 	width: 75%;
@@ -22,7 +22,7 @@ margin-top: 2%;
       font-weight: bold;
 }
 
-#emotions {
+#gifsDump {
 	font-family: 'Roboto', sans-serif;
 	width: 100%;
 	margin: 5px;
@@ -35,7 +35,7 @@ margin-top: 2%;
 
 }
 
-.emotion {
+.gifs {
 	margin: 5px;
 	width: auto;
 	height: auto;
