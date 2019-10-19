@@ -1,25 +1,5 @@
 var topics = ["muhammad ali", "elvis", "michael jackson", "james bond", "bruce lee", "prince", "michael jordan", "goofy"];
 
-
-// Initialize div before rendering buttons prior to adding new gifs
-function renderButtons(){
-	document.getElementById("gifsButtons").innerHTML = "";
-
-	for (var i = 0 ; i < topics.length; i++) {
-	//Dynamically generate buttons.
-		let a = document.createElement("button");
-			a.classList.add("gifs");
-			a.setAttribute("data-gifs", topics[i]);
-			a.innerHTML = topics[i];
-
-			document.getElementById("gifsButtons").append(a);
-			
-		}	
-		document.querySelectorAll("button").forEach(function (button) {
-			button.addEventListener("click", getGifs);
-		});
-	}
-
 //Function for getting the GIFs and dumping the GIF in to the div.
 
 function getGifs() {
@@ -36,16 +16,15 @@ function getGifs() {
 		console.log(queryURL);
 		console.log(responseJson);
 		renderButtons();
-		var results = responseJson.data;
+		let results = responseJson.data;
 
-		for (var i = 0; i < results.length; i++) {
+		for (let i = 0; i < results.length; i++) {
 			if (results[i].rating !== "r") {
-			var gifDiv = document.createElement("item");
-			var rating = results[i].rating;
-			var p = document.createElement("p").innerText = ("Rating:" + results[i].rating);
-
-			var gifsImage = document.createElement("img");
-
+			let gifDiv = document.createElement("item");
+			let rating = results[i].rating;
+			let p = document.createElement("p").innerText = ("Rating:" + results[i].rating);
+			let gifsImage = document.createElement("img");
+			
 			// Added div class to gif
 			gifsImage.classList.add("gif");
 			gifDiv.classList.add("gif");
@@ -55,7 +34,6 @@ function getGifs() {
         	gifsImage.setAttribute("data-animate", results[i].images.original.url);
         	gifsImage.setAttribute("data-still", results[i].images.original_still.url);
         	gifsImage.addEventListener("click", toggleImage);
-
 			gifsImage.setAttribute("src", results[i].images.fixed_height_still.url);
 
 			gifDiv.append(p);
@@ -70,9 +48,28 @@ function getGifs() {
 	
 };
 
+// Initialize div before rendering buttons prior to adding new gifs
+function renderButtons(){
+	document.getElementById("gifsButtons").innerHTML = "";
+
+	for (let i = 0 ; i < topics.length; i++) {
+	//Dynamically generate buttons.
+		let a = document.createElement("button");
+			a.classList.add("gifs");
+			a.setAttribute("data-gifs", topics[i]);
+			a.innerHTML = topics[i];
+
+			document.getElementById("gifsButtons").append(a);
+			
+		}	
+		document.querySelectorAll("button").forEach(function (button) {
+			button.addEventListener("click", getGifs);
+		});
+	}
+
+//Toggle images rendered on click event
 function toggleImage (event) {
 		const state = event.target.getAttribute("data-state");
-	
 		if (state === "still") {
 			event.target.setAttribute("src", event.target.getAttribute("data-animate"));
 			event.target.setAttribute("data-state", "animate");
@@ -86,12 +83,11 @@ function toggleImage (event) {
 document.getElementById("addGifs").addEventListener("click", function(e){
 	e.preventDefault();
 	// User input from the textbox
-	var gifs = document.getElementById("gifs-input").value.trim();
-
+	let gifs = document.getElementById("gifs-input").value.trim();
+	// Addd to array
 	topics.push(gifs);
-
+	//Show buttons
 	renderButtons();
-
 });
 
 renderButtons();
