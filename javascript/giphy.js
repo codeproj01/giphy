@@ -28,7 +28,7 @@ function getGifs() {
 				// Added div class to gif
 			gifsImage.classList.add("gif");
 			gifDiv.classList.add("gif");
-        	gifsImage.classList.add("gif");
+        		gifsImage.classList.add("gif");
         		gifsImage.setAttribute("src", results[i].images.original_still.url);
         		gifsImage.setAttribute("data-state", "still");
         		gifsImage.setAttribute("data-animate", results[i].images.original.url);
