@@ -26,20 +26,20 @@ function getGifs() {
 			let gifsImage = document.createElement("img");
 			
 				// Added div class to gif
-				gifsImage.classList.add("gif");
-				gifDiv.classList.add("gif");
-        		gifsImage.classList.add("gif");
+			gifsImage.classList.add("gif");
+			gifDiv.classList.add("gif");
+        	gifsImage.classList.add("gif");
         		gifsImage.setAttribute("src", results[i].images.original_still.url);
         		gifsImage.setAttribute("data-state", "still");
         		gifsImage.setAttribute("data-animate", results[i].images.original.url);
         		gifsImage.setAttribute("data-still", results[i].images.original_still.url);
         		gifsImage.addEventListener("click", toggleImage);
-				gifsImage.setAttribute("src", results[i].images.fixed_height_still.url);
+			gifsImage.setAttribute("src", results[i].images.fixed_height_still.url);
 
-				gifDiv.append(p);
-				gifDiv.append(gifsImage);
+			gifDiv.append(p);
+			gifDiv.append(gifsImage);
 		
-				document.getElementById("gifsDump").prepend(gifDiv);
+			document.getElementById("gifsDump").prepend(gifDiv);
 		}
 	}
 });
