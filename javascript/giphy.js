@@ -1,6 +1,6 @@
 var topics = ["muhammad ali", "elvis", "michael jackson", "james bond", "bruce lee", "prince", "michael jordan", "goofy"];
 
-//Function for getting the GIFs and dumping the GIF in to the div.
+// Function for getting the GIFs and dumping the GIF in to the div.
 
 function getGifs() {
 
@@ -25,23 +25,21 @@ function getGifs() {
 			let p = document.createElement("p").innerText = ("Rating:" + results[i].rating);
 			let gifsImage = document.createElement("img");
 			
-			// Added div class to gif
-			gifsImage.classList.add("gif");
-			gifDiv.classList.add("gif");
-        	gifsImage.classList.add("gif");
-        	gifsImage.setAttribute("src", results[i].images.original_still.url);
-        	gifsImage.setAttribute("data-state", "still");
-        	gifsImage.setAttribute("data-animate", results[i].images.original.url);
-        	gifsImage.setAttribute("data-still", results[i].images.original_still.url);
-        	gifsImage.addEventListener("click", toggleImage);
-			gifsImage.setAttribute("src", results[i].images.fixed_height_still.url);
+				// Added div class to gif
+				gifsImage.classList.add("gif");
+				gifDiv.classList.add("gif");
+        		gifsImage.classList.add("gif");
+        		gifsImage.setAttribute("src", results[i].images.original_still.url);
+        		gifsImage.setAttribute("data-state", "still");
+        		gifsImage.setAttribute("data-animate", results[i].images.original.url);
+        		gifsImage.setAttribute("data-still", results[i].images.original_still.url);
+        		gifsImage.addEventListener("click", toggleImage);
+				gifsImage.setAttribute("src", results[i].images.fixed_height_still.url);
 
-			gifDiv.append(p);
-			gifDiv.append(gifsImage);
+				gifDiv.append(p);
+				gifDiv.append(gifsImage);
 		
-			document.getElementById("gifsDump").prepend(gifDiv);
-		
-
+				document.getElementById("gifsDump").prepend(gifDiv);
 		}
 	}
 });
@@ -67,7 +65,7 @@ function renderButtons(){
 		});
 	}
 
-//Toggle images rendered on click event
+// Toggle images rendered on click event
 function toggleImage (event) {
 		const state = event.target.getAttribute("data-state");
 		if (state === "still") {
